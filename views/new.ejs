@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>Add a new animal here:</h2>
+            <div class="newForm">
+                <form action="/animals" method="POST">
+                    <input type = "text" name = "species" placeholder = "species">
+                    <br>
+                    <input type = "text" name = "location" placeholder = "location">
+                    <br>
+                    <input type = "number" name = "lifeExpectancy" placeholder = "life expectancy">
+                    <br>
+                    Am I Extinct?
+                    <input type = "checkbox" name = "extinct">
+                    <br>
+                    <input type = "submit" value = "add animal"/>
+                </form>
+            </div>
+            <a href = "/animals"><button>Return to List</button></a>
+    </main>
+</body>
+</html>

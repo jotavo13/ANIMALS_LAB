@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>You have selected <%= animal.species %></h2><br>
+        <h3>My favorite place to be: <%= animal.location%></h3>
+        <h3>I have a life expectancy of: <%= animal.lifeExpectancy %> years</h3>
+        <% if (animal.extinct == true){%>
+            <h3>I am extinct</h3>
+            <%}%>
+        <% if (animal.extinct ==! true){%>
+                <h3>I am not extinct</h3>
+                <%}%>
+        <a href = "/animals/edit/<%= animal._id %>"><button>Update this animal</button></a>
+        <a href = "/animals"><button>Return to List</button></a>
+    </main>
+</body>
+</html>

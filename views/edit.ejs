@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form method = "post" action = "/animals/<%= animal._id %>?_method=PUT" >
+            <legend>Edit <%= animal.species %></legend>
+            <input type = "text" name ="species" value = "<%= animal.species %>" placeholder = "species"/>
+            <br>
+            <input type = "text" name ="location" value = "<%= animal.location %>" placeholder = "location"/>
+            <br>
+            <input type = "number" name ="lifeExpectancy" value = "<%= animal.lifeExpectancy %>" placeholder = "life expectancy"/>
+            <br>
+            Am I extinct?
+            <input type = "checkbox" name ="extinct" <%= animal.extinct ? "checked" : "" %> />
+            <br>
+            <input type = "submit" value = "update animal"/>
+        </form>
+    </main>
+</body>
+</html>
